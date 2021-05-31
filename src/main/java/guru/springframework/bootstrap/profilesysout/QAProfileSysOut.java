@@ -1,5 +1,7 @@
 package guru.springframework.bootstrap.profilesysout;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
@@ -7,10 +9,13 @@ import org.springframework.stereotype.Component;
 @Profile("qa")
 public class QAProfileSysOut {
 
-    public QAProfileSysOut() {
+    @Autowired
+    public QAProfileSysOut(@Value("${guru.springframework.qa.profile.message}")
+                                   String msg ) {
         System.out.println("qa");
         System.out.println("qa");
         System.out.println("qa");
+        System.out.println(msg);
         System.out.println("qa");
 
     }
