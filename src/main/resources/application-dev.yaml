@@ -1,0 +1,5 @@
+guru:
+  springframework:
+    dev:
+      profile:
+        message: This is a dev yaml profile
